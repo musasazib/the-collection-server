@@ -19,7 +19,7 @@ async function run() {
     try {
         await client.connect();
 
-        const database = client.db('matleyHeadphone');
+        const database = client.db('fakeShop');
         const productsCollection = database.collection('products');
         const moreProductsCollection = database.collection('moreProducts');
         const userCollection = database.collection('users');
@@ -179,7 +179,7 @@ async function run() {
 run().catch(console.dir);
 
 app.get('/', (req, res) => {
-    res.send('Hello Matley Headphone')
+    res.send('Hello Fake Shop')
 })
 
 app.listen(port, () => {
